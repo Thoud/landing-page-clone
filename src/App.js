@@ -121,7 +121,7 @@ const sectionOneStyles = css`
     transform: translateX(-7%);
   }
 
-  h4 {
+  h5 {
     font-size: 1.09rem;
     color: ${darkBlue};
     margin: 105px 0 40px 0;
@@ -162,7 +162,7 @@ const sectionOneStyles = css`
 `;
 
 const sectionTwoStyles = css`
-  background-color: ${grayWhite};
+  background: ${grayWhite};
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -177,7 +177,7 @@ const sectionTwoStyles = css`
     margin: 9.6vw 0 2vw 0;
   }
 
-  h3 {
+  h4 {
     font-size: 1.29rem;
     color: ${darkBlue};
     font-weight: 700;
@@ -201,8 +201,80 @@ const sectionTwoStyles = css`
     }
 
     img {
-      margin: 0;
+      margin: 0 0 10vw 0;
       transform: none;
+    }
+  }
+`;
+
+const sectionThreeStyles = css`
+  background: ${white};
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  padding: 0 6vw;
+
+  & > div {
+    background: ${darkBlue};
+    width: 40vw;
+    height: 225px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4.2vw;
+    margin-bottom: 5vw;
+    transform: translateY(-2vw);
+  }
+
+  .cardOne {
+    grid-area: 1 / 1 / 1 / span 2;
+  }
+
+  .cardTwo {
+    grid-area: 2 / 2 / 2 / span 2;
+  }
+
+  .cardThree {
+    grid-area: 3 / 3 / 3 / span 2;
+  }
+
+  img {
+    margin: 4.2vw 3.1vw;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: ${white};
+    margin: 0.5vw 0 0.5vw 0;
+  }
+
+  p {
+    margin-top: 0.5vw;
+  }
+
+  .arrowOne {
+    grid-area: 2 / 1 / 2 / 1;
+  }
+
+  .arrowTwo {
+    grid-area: 3 / 2 / 3 / 2;
+  }
+
+  @media screen and (max-width: 990px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      transform: none;
+      width: 95vw;
+      height: 250px;
+    }
+
+    .arrowOne,
+    .arrowTwo {
+      display: none;
     }
   }
 `;
@@ -235,7 +307,7 @@ export default function App() {
           <img className="ruler" src={ruler} alt="Ruler in the background" />
           <img className="mainScreen" src={mainScreen} alt="Cartoon PC" />
 
-          <h4>Trusted by over 20 tech & marketing teams</h4>
+          <h5>Trusted by over 20 tech & marketing teams</h5>
 
           <div>
             <img src={logo1} alt="Logo of 'Sense360'" />
@@ -256,12 +328,54 @@ export default function App() {
               validate your ideas more quickly and better prioritize your time.
             </p>
 
-            <h3>Get professional design work in 3 easy steps</h3>
+            <h4>Get professional design work in 3 easy steps</h4>
           </div>
           <img src={man} alt="Cartoon Man" />
         </section>
 
-        <section css={sectionThreeStyles}></section>
+        <section css={sectionThreeStyles}>
+          <div className="cardOne">
+            <img src={folder} alt="folder" />
+
+            <div>
+              <h3>Submit your brief</h3>
+
+              <p>
+                Share with us your rough sketches, wireframes, screen
+                descriptions and other project details.
+              </p>
+            </div>
+          </div>
+
+          <div className="cardTwo">
+            <img src={flask} alt="flask" />
+
+            <div>
+              <h3>We'll get to work</h3>
+
+              <p>
+                We'll carefully turn your wireframes, prototypes & concepts into
+                user-friendly and stunning UI designs.
+              </p>
+            </div>
+          </div>
+
+          <div className="cardThree">
+            <img src={diamond} alt="diamond" />
+
+            <div>
+              <h3>Get designs you'll love</h3>
+
+              <p>
+                Receive your design files in no time. Request a revision or
+                start using them in your development.
+              </p>
+            </div>
+          </div>
+
+          <img src={arrow} alt="arrow" className="arrowOne" />
+          <img src={arrow} alt="arrow" className="arrowTwo" />
+        </section>
       </main>
       <footer></footer>
     </>
