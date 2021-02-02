@@ -47,7 +47,6 @@ const globalStyles = css`
   p {
     color: ${gray};
     font-weight: 500;
-    text-align: center;
     font-size: 1.09rem;
     margin-bottom: 25px;
     line-height: 150%;
