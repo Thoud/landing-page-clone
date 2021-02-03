@@ -2,6 +2,7 @@ import Header from './Header';
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import SectionThree from './SectionThree';
+import Footer from './Footer';
 
 // Import images
 // import b1 from '../images/b1.png';
@@ -11,7 +12,6 @@ import SectionThree from './SectionThree';
 // import b5 from '../images/b5.png';
 // import b6 from '../images/b6.png';
 // import circle1 from '../images/circle1.png';
-// import footerLogo from '../images/footer-logo.svg';
 // import hand from '../images/hand.png';
 // import icon1 from '../images/icon1.svg';
 // import icon2 from '../images/icon2.svg';
@@ -41,6 +41,7 @@ export default function App() {
         <SectionTwo />
         <SectionThree />
       </main>
+      <Footer />
     </>
   );
 }
