@@ -1,15 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { css, Global } from '@emotion/react';
-import App from './App';
-
-// Color palette
-const white = '#fafafa';
-const grayWhite = '#f8f9fa';
-const gray = '#8a94a6';
-const lightBlue = '#e6eafc';
-const mediumBlue = '#546ee8';
-const darkBlue = '#243141';
+import { colors } from './components/ColorPalette';
+import App from './components/App';
 
 const globalStyles = css`
   * {
@@ -27,8 +20,8 @@ const globalStyles = css`
   }
 
   .firstButtonStyle {
-    background: ${lightBlue};
-    color: ${mediumBlue};
+    background: ${colors.lightBlue};
+    color: ${colors.mediumBlue};
     border: none;
     text-align: center;
     font-weight: 600;
@@ -40,12 +33,12 @@ const globalStyles = css`
   }
 
   .firstButtonStyle:hover {
-    background: ${mediumBlue};
-    color: ${lightBlue};
+    background: ${colors.mediumBlue};
+    color: ${colors.lightBlue};
   }
 
   p {
-    color: ${gray};
+    color: ${colors.gray};
     font-weight: 500;
     font-size: 1.09rem;
     margin-bottom: 25px;
