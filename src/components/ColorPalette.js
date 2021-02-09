@@ -6,5 +6,5 @@ export const colors = {
   grayBorder: '#77839240',
   lightBlue: '#e6eafc',
   mediumBlue: '#546ee8',
-  darkBlue: '#243141'
+  darkBlue: '#243141',
 };

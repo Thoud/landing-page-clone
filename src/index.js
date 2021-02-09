@@ -1,8 +1,8 @@
+import { css, Global } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { css, Global } from '@emotion/react';
-import { colors } from './components/ColorPalette';
 import App from './components/App';
+import { colors } from './components/ColorPalette';
 
 const globalStyles = css`
   * {
@@ -72,5 +72,5 @@ ReactDOM.render(
     <Global styles={globalStyles} />
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
